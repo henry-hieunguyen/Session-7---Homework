@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>News</li>
+        <li>Articles</li>
+        <li>Blog</li>
+    </ul>
+
+    <p><button onclick="firstelement()">First Element</button></p>
+
+    <p id="firstitem"></p>
+
+    <p><button onclick="printAll()">Print all</button></p>
+
+    <p id="allitem"></p>
+
+
+    <script>
+        function firstelement() {
+            let x = document.getElementsByTagName("li");
+            console.log(x[0].innerHTML);
+            document.getElementById("firstitem").innerHTML = x[0].innerHTML;
+        }
+
+        function printAll() {
+            let x = document.getElementsByTagName("li");
+            for ( i = 0; i < x.length; i++ ) {
+                console.log(x[i].innerHTML);
+                document.getElementById("allitem").innerHTML += x[i].innerHTML+"<br>";
+            }
+        }
+    </script>
+    
+</body>
+
+</html>
